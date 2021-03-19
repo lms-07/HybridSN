@@ -1,0 +1,67 @@
+using earlystopping:
+earlyStopping=EarlyStopping(monitor='val_loss',patience=30,mode='auto')
+推测模型性能未达到预期 loss和acc有很大起伏 可能由于mode选择不合适
+
+
+6.966110318899155 Test loss (%)
+98.80139231681824 Test accuracy (%)
+
+98.6333227692059 Kappa accuracy (%)
+98.80139372822299 Overall accuracy (%)
+96.03769618450411 Average accuracy (%)
+
+                              precision    recall  f1-score   support
+
+                     Alfalfa       1.00      1.00      1.00        32
+                 Corn-notill       0.99      0.98      0.99      1000
+                Corn-mintill       0.99      0.98      0.99       581
+                        Corn       0.97      1.00      0.98       166
+               Grass-pasture       0.98      0.98      0.98       338
+                 Grass-trees       0.98      0.99      0.99       511
+         Grass-pasture-mowed       0.94      0.85      0.89        20
+               Hay-windrowed       1.00      1.00      1.00       335
+                        Oats       1.00      0.71      0.83        14
+              Soybean-notill       0.98      0.99      0.99       680
+             Soybean-mintill       0.99      0.99      0.99      1719
+               Soybean-clean       0.98      0.99      0.98       415
+                       Wheat       0.99      1.00      0.99       143
+                       Woods       1.00      1.00      1.00       886
+Buildings-Grass-Trees-Drives       1.00      0.96      0.98       270
+          Stone-Steel-Towers       0.87      0.94      0.90        65
+
+                    accuracy                           0.99      7175
+                   macro avg       0.98      0.96      0.97      7175
+                weighted avg       0.99      0.99      0.99      7175
+
+[[  32    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0]
+ [   0  982    2    0    0    0    0    0    0    3    9    1    0    3
+     0    0]
+ [   0    0  570    4    3    0    1    0    0    3    0    0    0    0
+     0    0]
+ [   0    0    0  166    0    0    0    0    0    0    0    0    0    0
+     0    0]
+ [   0    0    0    0  332    1    0    0    0    2    1    0    2    0
+     0    0]
+ [   0    0    0    0    0  506    0    0    0    0    5    0    0    0
+     0    0]
+ [   0    0    0    0    3    0   17    0    0    0    0    0    0    0
+     0    0]
+ [   0    0    0    0    0    0    0  335    0    0    0    0    0    0
+     0    0]
+ [   0    0    0    0    0    4    0    0   10    0    0    0    0    0
+     0    0]
+ [   0    5    0    0    0    0    0    0    0  672    3    0    0    0
+     0    0]
+ [   0    2    1    0    0    4    0    0    0    4 1708    0    0    0
+     0    0]
+ [   0    0    0    0    1    0    0    0    0    0    0  411    0    0
+     0    3]
+ [   0    0    0    0    0    0    0    0    0    0    0    0  143    0
+     0    0]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0  886
+     0    0]
+ [   0    0    0    2    0    0    0    0    0    0    0    4    0    0
+   258    6]
+ [   0    0    0    0    0    0    0    0    0    0    0    4    0    0
+     0   61]]

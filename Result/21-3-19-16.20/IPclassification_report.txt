@@ -1,0 +1,73 @@
+
+### model training epochs: 82
+### 根据预想 模型训练按照  earlystopping参照参数设置的val_accuracy 但是模型训练参照的好像是accuracy
+# 接下来运行调试
+# 1、不使用earlystopping 直接按照论文中所说 模型训练 100 epochs
+# 2、验证集validation_steps和validation_batch_size默认设置，这样validation_batch_size会和batch_size相同。
+# 3、earlystopping monitor---val_loss
+
+4.394102469086647 Test loss (%)
+99.27526116371155 Test accuracy (%)
+
+99.17331427458251 Kappa accuracy (%)
+99.27526132404181 Overall accuracy (%)
+99.13428558119615 Average accuracy (%)
+
+
+
+
+                              precision    recall  f1-score   support
+
+                     Alfalfa       1.00      0.97      0.98        32
+                 Corn-notill       0.99      0.99      0.99      1000
+                Corn-mintill       0.99      1.00      0.99       581
+                        Corn       1.00      1.00      1.00       166
+               Grass-pasture       1.00      0.99      0.99       338
+                 Grass-trees       1.00      0.96      0.98       511
+         Grass-pasture-mowed       1.00      1.00      1.00        20
+               Hay-windrowed       1.00      1.00      1.00       335
+                        Oats       1.00      1.00      1.00        14
+              Soybean-notill       1.00      0.99      0.99       680
+             Soybean-mintill       0.99      1.00      0.99      1719
+               Soybean-clean       1.00      0.98      0.99       415
+                       Wheat       0.98      1.00      0.99       143
+                       Woods       1.00      1.00      1.00       886
+Buildings-Grass-Trees-Drives       0.99      1.00      1.00       270
+          Stone-Steel-Towers       0.96      0.98      0.97        65
+
+                    accuracy                           0.99      7175
+                   macro avg       0.99      0.99      0.99      7175
+                weighted avg       0.99      0.99      0.99      7175
+
+[[  31    0    0    0    0    1    0    0    0    0    0    0    0    0
+     0    0]
+ [   0  990    0    0    0    0    0    0    0    3    3    0    0    3
+     1    0]
+ [   0    1  580    0    0    0    0    0    0    0    0    0    0    0
+     0    0]
+ [   0    0    0  166    0    0    0    0    0    0    0    0    0    0
+     0    0]
+ [   0    0    0    0  334    0    0    0    0    0    1    0    3    0
+     0    0]
+ [   0    3    0    0    0  492    0    0    0    0   16    0    0    0
+     0    0]
+ [   0    0    0    0    0    0   20    0    0    0    0    0    0    0
+     0    0]
+ [   0    0    0    0    0    0    0  335    0    0    0    0    0    0
+     0    0]
+ [   0    0    0    0    0    0    0    0   14    0    0    0    0    0
+     0    0]
+ [   0    4    0    0    0    0    0    0    0  676    0    0    0    0
+     0    0]
+ [   0    1    0    0    0    1    0    0    0    0 1717    0    0    0
+     0    0]
+ [   0    0    6    0    0    0    0    0    0    0    0  405    0    0
+     1    3]
+ [   0    0    0    0    0    0    0    0    0    0    0    0  143    0
+     0    0]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0  886
+     0    0]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   270    0]
+ [   0    0    0    0    0    0    0    0    0    0    0    1    0    0
+     0   64]]
